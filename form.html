@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1">
+    <title>Registration Form</title>
+    <style>
+        h1{
+            font-style:normal;
+            color: blueviolet;
+        }
+        div.Name{
+            font-style: normal;
+            color:indigo;
+        }
+        div.Mail{
+            font-style: normal;
+            color: rgb(7, 99, 68);
+        }
+        div.Contact{
+            font-style: normal;
+            color: rgb(77, 138, 16);
+
+        }
+        div.subject{
+            font-style: normal;
+            color: black;
+        }
+    </style>
+    <script>
+        function reg() {
+         alert("Details added successfully");
+           
+        }
+    </script>
+   </head>
+
+   <body>
+       <form action="form.html" method="POST" style="background-color: chartreuse;width:fit-content ; border-radius: 2%;border-style: double;text-align: center;padding:160px;width: auto;">
+       <h1>Registration Form</h1>
+       <div>
+<div class="Name">Name :<input type="text" name="Name" required style="font-family: 'Courier New', Courier, monospace; background-color: cornflowerblue;"></div> <br/>
+<div class="Mail">Mail :<input type="email" name="Mail" style="font-family: 'Courier New', Courier, monospace; background-color: darkcyan;"></div> <br/>
+<div class="Contact">Contact :<input type="tel" name="tel" minlength="10" maxlength="10" style="font-family: 'Courier New', Courier, monospace; background-color: darkmagenta;"></div> <br/>
+<div class="status">status :<input type="radio" id="status" name="status">Married
+                            <input type="radio" id="status" name="status">Single 
+                        </div><br/>
+<div class="subject">Subjects:<input type="checkbox" name="subject">Maths
+                              <input type="checkbox" name="subject">Physics
+                              <input type="checkbox" name="subject">Chemistry
+                              <input type="checkbox" name="subject">Biology
+</div>
+<div><input type="submit" id="submit" name="Submit" onclick="reg()" style="background-color: dodgerblue;"></div>
+<a href="login.html">Back</a>
+</div>
+</form>
+    </body>
+</html>

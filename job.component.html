@@ -1,0 +1,35 @@
+
+<style>
+    ul{
+        list-style: square;
+        color: rgb(236, 17, 17);
+        font-size: medium;
+    }
+</style>
+<img [src]="imgscr">
+<h1>Directives</h1>
+<p *ngIf="showvalue">Hai welcome to Directives</p>
+<button class="btn btn-primary" (click)="showdir()">{{showvalue ? "Hide":"Show" }} Text</button>
+<ul>
+    <li *ngFor="let customer of userList"[ngClass]="{
+        'text-success': customer.id=== 1,
+        'text-danger': customer.id=== 2,
+        'text-info': customer.id=== 3,
+        'text-warning': customer.id=== 4,
+        'text-primary': customer.id=== 5
+
+    }">
+{{customer.name}}-{{customer.email}}-{{customer.address.city}}-{{customer.address.zipcode}}
+    </li>
+</ul>
+<br/>
+<!-- <select class="" [(ngModel)]="selectUser">
+    <option *ngFor="let customer of userList" [value]="customer.id">{{customer.name}}</option>
+</select>
+
+<div  [ngSwitch]="selectUser">
+<div *ngSwitchCase='1' >{{userList[selectUser] | json}}</div>
+<div *ngSwitchCase='2' >{{userList[selectUser] | json}}</div>
+<div *ngSwitchCase='3' >{{userList[selectUser] | json}}</div>
+<div *ngSwitchDefault >You have selected different User</div>
+</div> -->

@@ -1,0 +1,36 @@
+<style>
+  h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkgreen;
+  }
+</style>
+
+<form action="app.component.html" method="POST" style="border-radius: 2%;border-style: double;text-align: center;padding:20px;width: auto;background-image:url('https://th.bing.com/th?q=Xxxtension+Wallpaper+720P&w=120&h=120&c=1&rs=1&qlt=90&o=6&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&adlt=moderate&t=1&mw=247'); background-repeat: no-repeat;background-attachment: fixed;
+background-size: cover;">
+ <!-- stringinterpolation -->
+<h1>{{title}}</h1>
+<!-- property binding -->
+<!-- <img [src]="imgscr"/>  <br/> -->
+
+<img [src]="imgscr2"/>  <br/>
+
+
+<!-- Two way data Binding -->
+
+UserName :
+<input type="text" [(ngModel)]="UserName" name="user" placeholder="Enter UserName" required/> <br/>
+<p>{{UserName}}</p> <br/>
+password :
+<input type="password" [(ngModel)]="Password" name="password" placeholder="Enter Password" required/> <br/>
+<p>{{Password}}</p> <br/>
+
+<!-- event binding -->
+<button (click)="event()" style="background-color:deepskyblue;">Click here</button>
+<br/>
+<br/>
+<div>
+
+  <app-job></app-job>
+  <app-bottel></app-bottel>
+</div>
+</form>
